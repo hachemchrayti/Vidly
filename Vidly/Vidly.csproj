@@ -179,11 +179,28 @@
     <Compile Include="Migrations\202103101838205_InitialModel.Designer.cs">
       <DependentUpon>202103101838205_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103101902133_AddisSubscribedToNewsLetter.cs" />
+    <Compile Include="Migrations\202103101902133_AddisSubscribedToNewsLetter.Designer.cs">
+      <DependentUpon>202103101902133_AddisSubscribedToNewsLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103101906331_AddMembershipType.cs" />
+    <Compile Include="Migrations\202103101906331_AddMembershipType.Designer.cs">
+      <DependentUpon>202103101906331_AddMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103101908218_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\202103101908218_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>202103101908218_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103101938352_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\202103101938352_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>202103101938352_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -246,10 +263,12 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Movies\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -268,10 +287,25 @@
     <EmbeddedResource Include="Migrations\202103101838205_InitialModel.resx">
       <DependentUpon>202103101838205_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103101902133_AddisSubscribedToNewsLetter.resx">
+      <DependentUpon>202103101902133_AddisSubscribedToNewsLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103101906331_AddMembershipType.resx">
+      <DependentUpon>202103101906331_AddMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103101908218_PopulateMembershipTypes.resx">
+      <DependentUpon>202103101908218_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103101938352_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>202103101938352_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
